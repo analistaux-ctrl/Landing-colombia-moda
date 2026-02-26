@@ -17,9 +17,9 @@ import React from 'react';
 const HeroBanner = () => (
   <div className="w-full bg-[#c4c4c4] h-[50vh] md:h-[85vh] flex items-center justify-center">
     <div className="text-center text-white tracking-widest flex flex-col items-center">
-      <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-[0.2em] mb-1">Colombiamoda</h1>
-      <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] mb-3">La semana de la moda de Colombia®</p>
-      <p className="text-sm md:text-base font-bold uppercase tracking-[0.2em]">Cocreación</p>
+      <h1 className="text-[28px] md:text-[46px] font-medium uppercase tracking-[0.2em] mb-1">Colombiamoda</h1>
+      <p className="text-[12px] md:text-[14px] uppercase tracking-[0.3em] mb-3">La semana de la moda de Colombia®</p>
+      <p className="text-[14px] md:text-[16px] font-medium uppercase tracking-[0.2em]">Cocreación</p>
     </div>
   </div>
 );
@@ -27,8 +27,8 @@ const HeroBanner = () => (
 // Equivalente a una sección "Rich Text"
 const RichText = ({ title, text }: { title?: string, text: string }) => (
   <div className="w-full py-12 md:py-16 px-4 flex flex-col items-center justify-center text-center">
-    {title && <h2 className="text-lg md:text-xl font-bold mb-4 uppercase tracking-widest">{title}</h2>}
-    <p className="max-w-2xl text-sm md:text-base leading-relaxed font-medium">
+    {title && <h2 className="text-[18px] md:text-[24px] font-medium mb-4 uppercase tracking-widest">{title}</h2>}
+    <p className="max-w-2xl text-[14px] md:text-[16px] leading-relaxed font-normal">
       {text}
     </p>
   </div>
@@ -41,9 +41,9 @@ const BannerCarousel = ({ items }: { items: { image: string, title: string, link
       <div key={idx} className="relative min-w-full h-[60vh] md:h-[80vh] snap-center group overflow-hidden">
         <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div className="absolute inset-0 bg-black/20 flex flex-col justify-end items-start p-8 md:p-12">
-          <h3 className="text-white text-lg md:text-xl font-bold uppercase tracking-widest mb-3">{item.title}</h3>
+          <h3 className="text-white text-[18px] md:text-[24px] font-medium uppercase tracking-widest mb-3">{item.title}</h3>
           {item.linkText && (
-            <a href="#" className="text-white text-xs md:text-sm font-bold uppercase tracking-widest underline underline-offset-4 p-1 hover:text-gray-200 transition-colors inline-block">
+            <a href="#" className="text-white text-[12px] md:text-[14px] font-semibold uppercase tracking-widest underline underline-offset-4 p-1 hover:text-gray-200 transition-colors inline-block">
               {item.linkText}
             </a>
           )}
@@ -60,9 +60,9 @@ const SplitBanner = ({ items }: { items: { image: string, title: string, linkTex
       <div key={idx} className="relative w-full md:w-1/2 h-[60vh] md:h-[80vh] group overflow-hidden">
         <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
         <div className="absolute inset-0 bg-black/10 flex flex-col justify-end p-8 md:p-12">
-          <h3 className="text-white text-lg md:text-xl font-bold uppercase tracking-widest mb-3">{item.title}</h3>
+          <h3 className="text-white text-[18px] md:text-[24px] font-medium uppercase tracking-widest mb-3">{item.title}</h3>
           {item.linkText && (
-            <a href="#" className="text-white text-xs md:text-sm font-bold uppercase tracking-widest underline underline-offset-4 p-1 hover:text-gray-200 transition-colors inline-block">
+            <a href="#" className="text-white text-[12px] md:text-[14px] font-semibold uppercase tracking-widest underline underline-offset-4 p-1 hover:text-gray-200 transition-colors inline-block">
               {item.linkText}
             </a>
           )}
@@ -80,7 +80,7 @@ const ImageGrid = ({ items }: { items: { image: string, title: string }[] }) => 
         <div key={idx} className="relative min-w-[85vw] md:min-w-0 aspect-[3/4] md:aspect-auto md:h-[70vh] snap-center group overflow-hidden">
           <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent flex flex-col justify-end p-6 md:p-8 items-center">
-            <h3 className="text-white text-sm md:text-base font-bold uppercase tracking-widest">{item.title}</h3>
+            <h3 className="text-white text-[14px] md:text-[16px] font-medium uppercase tracking-widest">{item.title}</h3>
           </div>
         </div>
       ))}
@@ -92,11 +92,11 @@ const ImageGrid = ({ items }: { items: { image: string, title: string }[] }) => 
 const DesignerSection = () => (
   <div className="w-full py-16 md:py-24 px-6 md:px-12 flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-16 max-w-7xl mx-auto">
     <div className="w-full md:w-1/3 flex flex-col items-start text-left">
-      <h2 className="text-xl md:text-2xl font-bold mb-6 uppercase tracking-widest">Nuestros Diseñadores</h2>
-      <p className="text-sm md:text-base mb-8 leading-relaxed font-medium">
+      <h2 className="text-[24px] md:text-[28px] font-medium mb-6 uppercase tracking-widest">Nuestros Diseñadores</h2>
+      <p className="text-[14px] md:text-[16px] mb-8 leading-relaxed font-normal">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
       </p>
-      <a href="#" className="text-black text-xs md:text-sm font-bold uppercase tracking-widest underline underline-offset-4 p-1 hover:text-gray-600 transition-colors inline-block">
+      <a href="#" className="text-black text-[12px] md:text-[14px] font-semibold uppercase tracking-widest underline underline-offset-4 p-1 hover:text-gray-600 transition-colors inline-block">
         Ver Más
       </a>
     </div>
@@ -104,7 +104,7 @@ const DesignerSection = () => (
       {[1, 2].map((item) => (
         <div key={item} className="flex flex-col gap-4">
           <div className="w-full aspect-[3/4] bg-[#e5e5e5]"></div>
-          <p className="text-xs md:text-sm font-bold uppercase tracking-widest">Lorem Ipsum</p>
+          <p className="text-[12px] md:text-[14px] font-medium uppercase tracking-widest">Lorem Ipsum</p>
         </div>
       ))}
     </div>
