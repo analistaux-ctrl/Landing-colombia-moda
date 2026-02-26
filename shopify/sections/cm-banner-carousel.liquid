@@ -1,0 +1,66 @@
+<div class="w-full flex overflow-x-auto snap-x snap-mandatory cm-hide-scrollbar cm-font-sans">
+  {% for block in section.blocks %}
+    <div class="relative min-w-full h-[60vh] md:h-[80vh] snap-center group overflow-hidden" {{ block.shopify_attributes }}>
+      {% if block.settings.image != blank %}
+        {{ block.settings.image | image_url: width: 2000 | image_tag: class: 'w-full h-full object-cover transition-transform duration-700 group-hover:scale-105' }}
+      {% else %}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-200' }}
+      {% endif %}
+      
+      <div class="absolute inset-0 bg-black/20 flex flex-col justify-end items-start p-8 md:p-12">
+        <h3 class="text-white text-[18px] md:text-[24px] font-medium uppercase tracking-widest mb-3">{{ block.settings.title }}</h3>
+        {% if block.settings.link_text != blank and block.settings.link_url != blank %}
+          <a href="{{ block.settings.link_url }}" class="text-white text-[12px] md:text-[14px] font-semibold uppercase tracking-widest underline underline-offset-4 p-1 hover:text-gray-200 transition-colors inline-block">
+            {{ block.settings.link_text }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "CM Banner Carousel",
+  "blocks": [
+    {
+      "type": "banner",
+      "name": "Banner",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Brand Name"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text",
+          "default": "VER MÁS"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CM Banner Carousel",
+      "blocks": [
+        { "type": "banner" },
+        { "type": "banner" },
+        { "type": "banner" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,44 @@
+<div class="w-full bg-[#c4c4c4] h-[50vh] md:h-[85vh] flex items-center justify-center cm-font-sans" style="background-color: {{ section.settings.bg_color }};">
+  <div class="text-center text-white tracking-widest flex flex-col items-center">
+    <h1 class="text-[28px] md:text-[46px] font-medium uppercase tracking-[0.2em] mb-1">{{ section.settings.title }}</h1>
+    <p class="text-[12px] md:text-[14px] uppercase tracking-[0.3em] mb-3">{{ section.settings.subtitle }}</p>
+    <p class="text-[14px] md:text-[16px] font-medium uppercase tracking-[0.2em]">{{ section.settings.bottom_text }}</p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CM Hero Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Colombiamoda"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "La semana de la moda de Colombia®"
+    },
+    {
+      "type": "text",
+      "id": "bottom_text",
+      "label": "Bottom Text",
+      "default": "Cocreación"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#c4c4c4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CM Hero Banner"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,37 @@
+/* Custom CSS for Colombiamoda Landing */
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('https://cdn.shopify.com/s/files/1/0550/3293/8662/files/SuisseIntl-Regular.woff2?v=1763591388') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('https://cdn.shopify.com/s/files/1/0550/3293/8662/files/SuisseIntl-Medium.woff2?v=1763591387') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('https://cdn.shopify.com/s/files/1/0550/3293/8662/files/SuisseIntl-SemiBold.woff2?v=1763591387') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+.cm-font-sans {
+  font-family: 'SuisseIntl', ui-sans-serif, system-ui, sans-serif;
+}
+
+.cm-hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cm-hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
